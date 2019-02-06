@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     func UpdateUI(state: GameState) {
         switch state {
         case .Start:
+            self.view.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 1, alpha: 1.0)
             userSign.text = "👾"
             gameStatus.text = state.gameStatus
             playerChoosePaper.setTitle("🖐", for: UIControl.State.normal)
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
             playerChooseScissors.isEnabled = true
             playerChooseScissors.isHidden = false
         case .Win, .Loose, .Draw:
+            self.view.backgroundColor = UIColor(hue: 0.1361, saturation: 1, brightness: 1, alpha: 1.0)
             userSign.text = playerSign.signSymbol
             gameStatus.text = state.gameStatus
             playerChoosePaper.setTitle(computerSign.signSymbol, for: UIControl.State.normal)
