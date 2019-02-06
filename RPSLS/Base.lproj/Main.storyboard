@@ -18,52 +18,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-oU-QM7">
-                                <rect key="frame" x="55" y="251.66666666666663" width="304" height="393"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-oU-QM7">
+                                <rect key="frame" x="55" y="70" width="304" height="756"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👾" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgC-N3-YUZ">
-                                        <rect key="frame" x="115" y="0.0" width="74" height="82.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock Paper Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-OT-8eG">
-                                        <rect key="frame" x="38.666666666666686" y="128.66666666666666" width="227" height="31.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oOq-zG-br6">
-                                        <rect key="frame" x="1" y="206.00000000000003" width="302" height="94.999999999999972"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="Mon-wv-aFA">
+                                        <rect key="frame" x="38.666666666666686" y="0.0" width="227" height="410"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVD-F2-teN">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="95"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                                <state key="normal" title="✊"/>
-                                                <connections>
-                                                    <action selector="rockChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lQe-3K-FFi"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-KW-CUU">
-                                                <rect key="frame" x="114" y="0.0" width="74" height="95"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                                <state key="normal" title="🖐"/>
-                                                <connections>
-                                                    <action selector="paperChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bw-6F-TR2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2V-CV-JjI">
-                                                <rect key="frame" x="228" y="0.0" width="74" height="95"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                                <state key="normal" title="✌️"/>
-                                                <connections>
-                                                    <action selector="scissorsChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KW-7x-WWW"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="NAD-kp-Srz">
+                                                <rect key="frame" x="67.666666666666657" y="0.0" width="91.666666666666657" height="111.66666666666667"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-ht-9Zk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👾" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgC-N3-YUZ">
+                                                        <rect key="frame" x="0.0" y="31.000000000000007" width="91.666666666666671" height="80.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="69"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="hdJ-zk-VVW">
+                                                <rect key="frame" x="0.0" y="173.66666666666666" width="227" height="60.666666666666657"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock Paper Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHU-OT-8eG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="227" height="31.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lizard Spock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-ns-FIr">
+                                                        <rect key="frame" x="40.999999999999986" y="29.333333333333343" width="145" height="31.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-AU-oAY">
+                                                <rect key="frame" x="76.333333333333329" y="296.33333333333331" width="73.999999999999986" height="113.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👌🏻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrf-Ue-Kwm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="82.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2C-nc-nJa">
+                                                        <rect key="frame" x="0.0" y="89.666666666666686" width="74" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Di1-6A-XTx">
+                                        <rect key="frame" x="1" y="450" width="302" height="220"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oOq-zG-br6">
+                                                <rect key="frame" x="0.0" y="0.0" width="302" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVD-F2-teN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="95"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <state key="normal" title="✊"/>
+                                                        <connections>
+                                                            <action selector="rockChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lQe-3K-FFi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-KW-CUU">
+                                                        <rect key="frame" x="114" y="0.0" width="74" height="95"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <state key="normal" title="🖐"/>
+                                                        <connections>
+                                                            <action selector="paperChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bw-6F-TR2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2V-CV-JjI">
+                                                        <rect key="frame" x="228" y="0.0" width="74" height="95"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <state key="normal" title="✌️"/>
+                                                        <connections>
+                                                            <action selector="scissorsChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8KW-7x-WWW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aJj-hk-55g">
+                                                <rect key="frame" x="64.666666666666686" y="125" width="173" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEz-32-uhm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="95"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <state key="normal" title="🦎"/>
+                                                        <connections>
+                                                            <action selector="lizardChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aot-QB-O7h"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cg-2J-hXV">
+                                                        <rect key="frame" x="99" y="0.0" width="74" height="95"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                                        <state key="normal" title="🖖"/>
+                                                        <connections>
+                                                            <action selector="spockChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOY-4v-a5X"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wO-0N-G7g">
-                                        <rect key="frame" x="88.666666666666657" y="347" width="127" height="46"/>
+                                        <rect key="frame" x="88.666666666666657" y="710" width="127" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Play Again"/>
                                         <connections>
@@ -82,11 +152,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="compLabel" destination="jgj-ht-9Zk" id="8Vx-6r-H6f"/>
                         <outlet property="gameStatus" destination="VHU-OT-8eG" id="axR-Pv-ela"/>
+                        <outlet property="lizardSpock" destination="Eq0-ns-FIr" id="Z8A-Ao-Hs2"/>
                         <outlet property="playAgain" destination="9wO-0N-G7g" id="3nV-gM-Lxj"/>
-                        <outlet property="playerChoosePaper" destination="cwl-KW-CUU" id="tEN-6t-HrP"/>
-                        <outlet property="playerChooseRock" destination="hVD-F2-teN" id="D6r-KE-pzG"/>
-                        <outlet property="playerChooseScissors" destination="a2V-CV-JjI" id="Mff-Iu-9nd"/>
+                        <outlet property="playerChoiceUpdate" destination="Nrf-Ue-Kwm" id="llx-kd-rfQ"/>
+                        <outlet property="playerChoseLizard" destination="QEz-32-uhm" id="wGg-mH-x8d"/>
+                        <outlet property="playerChosePaper" destination="cwl-KW-CUU" id="tEN-6t-HrP"/>
+                        <outlet property="playerChoseRock" destination="hVD-F2-teN" id="D6r-KE-pzG"/>
+                        <outlet property="playerChoseScissors" destination="a2V-CV-JjI" id="Mff-Iu-9nd"/>
+                        <outlet property="playerChoseSpock" destination="1cg-2J-hXV" id="l8F-M2-mho"/>
+                        <outlet property="plyrLabel" destination="y2C-nc-nJa" id="EoA-Ya-79t"/>
                         <outlet property="userSign" destination="xgC-N3-YUZ" id="zMB-hs-Z6q"/>
                     </connections>
                 </viewController>

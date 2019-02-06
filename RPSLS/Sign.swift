@@ -9,7 +9,7 @@
 import Foundation
 import GameplayKit
 
-let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
+let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 4)
 
 func randomSign() -> Sign {
     let sign = randomChoice.nextInt()
@@ -18,27 +18,30 @@ func randomSign() -> Sign {
         return .Rock
     } else if (sign == 1) {
         return .Paper
-    } else {
+    } else if (sign == 2) {
         return .Scisors
+    } else if (sign == 3) {
+        return .Lizard
+    } else {
+        return .Spock
     }
 }
 
 enum Sign {
-    case Rock, Paper, Scisors
-//    case Lizard, Spock
+    case Rock, Paper, Scisors, Lizard, Spock
     
     var signSymbol: String {
         switch self {
         case .Paper:
-            return "🤚"
+            return "🖐"
         case .Rock:
             return "✊"
         case .Scisors:
             return "✌️"
-//        case .Lizard:
-//            return "🦎"
-//        case .Spock:
-//            return "🖖"
+        case .Lizard:
+            return "🦎"
+        case .Spock:
+            return "🖖"
         }
     }
     
@@ -55,6 +58,10 @@ enum Sign {
                 return .Win //player wins
             case .Scisors:
                 return .Loose //player looses
+            case .Lizard:
+                return .Loose
+            case .Spock:
+                return .Win
             }
         //case for rock
         case .Rock:
@@ -65,6 +72,10 @@ enum Sign {
                 return .Draw
             case .Scisors:
                 return .Win
+            case .Lizard:
+                return .Win
+            case .Spock:
+                return .Loose
             }
         //case for scissors
         case .Scisors:
@@ -75,8 +86,38 @@ enum Sign {
                 return .Loose
             case .Scisors:
                 return .Draw
+            case .Lizard:
+                return .Win
+            case .Spock:
+                return .Loose
             }
-            //TODO: add code for Lizard and Spock
+        case .Lizard:
+            switch otherSign {
+            case .Paper:
+                return .Win //Lizard eats Paper
+            case .Rock:
+                return .Loose //Rock crushes lizard
+            case .Scisors:
+                return .Loose //Scissors decapitate lizard
+            case .Lizard:
+                return .Draw //Draw
+            case .Spock:
+                return .Win //Lizard poisons Spock
+            }
+        case .Spock:
+            switch otherSign {
+            case .Paper:
+                return .Loose //Paper disproves Spock
+            case .Rock:
+                return .Win //Spock destroys Rock
+            case .Scisors:
+                return .Win //Spock Vaporises Scissons
+            case .Lizard:
+                return .Loose //Lizard Poisons Spock
+            case .Spock:
+                return .Draw //Draw
+            }
+            
         }
     }
 }

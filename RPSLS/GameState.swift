@@ -16,11 +16,11 @@ enum GameState {
         case .Start:
             return "Rock Paper Scissors"
         case .Win:
-            return "You Win!"
+            return "You Win!\nPlayer Choice:"
         case .Loose:
-            return "You Loose!"
+            return "You Loose!\nPlayer Choice:"
         case .Draw:
-            return "Draw!"
+            return "Draw!\nPlayer Choice:"
         }
     }
 }
