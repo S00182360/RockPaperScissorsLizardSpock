@@ -7,9 +7,25 @@
 //
 
 import Foundation
+import GameplayKit
+
+let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
+
+func randomSign() -> Sign {
+    let sign = randomChoice.nextInt()
+    //TODO: Add further code for Lizard and Spock
+    if(sign == 0) {
+        return .Rock
+    } else if (sign == 1) {
+        return .Paper
+    } else {
+        return .Scisors
+    }
+}
 
 enum Sign {
     case Rock, Paper, Scisors
+//    case Lizard, Spock
     
     var signSymbol: String {
         switch self {
@@ -19,10 +35,16 @@ enum Sign {
             return "✊"
         case .Scisors:
             return "✌️"
+//        case .Lizard:
+//            return "🦎"
+//        case .Spock:
+//            return "🖖"
         }
     }
     
     func CompareSign(otherSign: Sign) -> GameState {
+        //TODO: Add additional cases for Lizard and Spock
+        //and to internal switches
         switch self {
 //            case for paper
         case .Paper:
@@ -34,6 +56,7 @@ enum Sign {
             case .Scisors:
                 return .Loose //player looses
             }
+        //case for rock
         case .Rock:
             switch otherSign {
             case .Paper:
@@ -43,6 +66,7 @@ enum Sign {
             case .Scisors:
                 return .Win
             }
+        //case for scissors
         case .Scisors:
             switch otherSign {
             case .Paper:
@@ -52,7 +76,7 @@ enum Sign {
             case .Scisors:
                 return .Draw
             }
-
+            //TODO: add code for Lizard and Spock
         }
     }
 }

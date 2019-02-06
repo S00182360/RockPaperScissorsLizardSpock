@@ -10,4 +10,17 @@ import Foundation
 
 enum GameState {
     case Start, Win, Loose, Draw
+    
+    var gameStatus: String{
+        switch self {
+        case .Start:
+            return "Rock Paper Scissors"
+        case .Win:
+            return "You Win!"
+        case .Loose:
+            return "You Loose!"
+        case .Draw:
+            return "Draw!"
+        }
+    }
 }
